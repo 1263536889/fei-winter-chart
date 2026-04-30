@@ -1,6 +1,7 @@
 {
   "name": "@fei-winter/fei-winter-chart",
   "private": false,
+  "homepage": "https://1263536889.github.io/fei-winter-chart",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public",
