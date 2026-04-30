@@ -1,12 +1,8 @@
 {
-  "name": "@fei-winter/fei-winter-chart",
-  "private": false,
-  "homepage": "https://1263536889.github.io/fei-winter-chart",
-  "version": "1.0.0",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
+  "name": "fei-winter-chart",
+  "private": true,
+  "homepage": "https://1263536889.github.io/fei-winter-chart/",
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "web-chart",
@@ -16,9 +12,9 @@
   "typings": "typings/index.d.ts",
   "scripts": {
     "start": "vite --host",
-    "prebuild": "npm version patch",
     "build": "vite build",
-    "postbuild": "npm publish --registry=https://registry.npmjs.org"
+    "preview": "vite preview --host",
+    "build:lib": "vite build --config vite.lib.config.ts"
   },
   "dependencies": {
     "echarts": "^5.4.2",

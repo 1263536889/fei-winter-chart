@@ -42,11 +42,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      # 4. 构建项目，生成静态文件
+      # 4. 构建项目（BASE_PATH 与 GitHub Pages 项目站 /<仓库名>/ 一致）
       - name: Build
         run: npm run build
-        # 注意：新版React (Vite/CRA) 构建输出目录通常为 'dist'，老版本CRA为 'build'
-        # 请检查你的项目根目录下的配置文件（如vite.config.js）中 build.outDir 的设置，并相应调整下面路径
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
       
       # 5. 配置部署工具
       - name: Setup Pages
